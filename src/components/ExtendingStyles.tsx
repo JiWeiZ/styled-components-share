@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from 'react';
-import { ToolbarButtonItem } from './AdaptingBasedOnProps'
+import { ToolbarButtonItem, IToolbarButtonItemProps } from './AdaptingBasedOnProps'
 import { Line } from './Line';
 
 const ToolbarButtonItemWithBorder = styled(ToolbarButtonItem)`
@@ -21,16 +21,15 @@ export const ExtendingStyles = () => (
     </div>
     <Line />
     <div>
-      
       <ToolbarButtonItemWithBorder
-        as="a" 
+        as="a"
         href="https://www.163.com/"
         disabled={false}
         active={false}
-        popLabel='字体'
-        fixedWidth={70}
+        popLabel='163.com'
+        fixedWidth={100}
       >
-        微软雅黑
+        www.163.com
       </ToolbarButtonItemWithBorder>
     </div>
   </div>

@@ -1,9 +1,13 @@
-import { GettingStarted } from './GettingStarted.tsx'
-import { AdaptingBasedOnProps } from './AdaptingBasedOnProps.tsx'
-import { ExtendingStyles } from './ExtendingStyles.tsx'
+import { GettingStarted } from './GettingStarted'
+import { AdaptingBasedOnProps } from './AdaptingBasedOnProps'
+import { ExtendingStyles } from './ExtendingStyles'
+import { StylingAnyComponent } from './StylingAnyComponent'
+import { AttachingAdditionalProps } from './AttachingAdditionalProps'
 
 export default [
   GettingStarted,
   AdaptingBasedOnProps,
   ExtendingStyles,
+  StylingAnyComponent,
+  AttachingAdditionalProps,
 ]

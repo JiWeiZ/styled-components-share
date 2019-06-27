@@ -24,6 +24,7 @@ export const ToolbarButtonItem = styled.div<IToolbarButtonItemProps>`
         content: '${props => props.popLabel}';
         display: block;
         position: absolute;
+        z-index:999;
         bottom: -35px;
         left: 50%;
         transform: translateX(-50%);
@@ -42,6 +43,7 @@ export const ToolbarButtonItem = styled.div<IToolbarButtonItemProps>`
     ::before {
         content: '';
         position: absolute;
+        z-index:999;
         bottom: -10px;
         left: 50%;
         border-top: 8px solid rgba(0, 0, 0, 0.7);
