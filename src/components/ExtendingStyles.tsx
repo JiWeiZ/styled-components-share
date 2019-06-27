@@ -7,6 +7,8 @@ const ToolbarButtonItemWithBorder = styled(ToolbarButtonItem)`
   border: 1px solid red;
 `
 
+const Anchor = ToolbarButtonItemWithBorder.withComponent('a')
+
 export const ExtendingStyles = () => (
   <div>
     <div>
@@ -31,6 +33,18 @@ export const ExtendingStyles = () => (
       >
         www.163.com
       </ToolbarButtonItemWithBorder>
+    </div>
+    <Line />
+    <div>
+      <Anchor
+        href="https://www.163.com/"
+        disabled={false}
+        active={false}
+        popLabel='163.com'
+        fixedWidth={100}
+      >
+        www.163.com
+      </Anchor>
     </div>
   </div>
 )

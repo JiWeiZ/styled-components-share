@@ -3,6 +3,7 @@ import { AdaptingBasedOnProps } from './AdaptingBasedOnProps'
 import { ExtendingStyles } from './ExtendingStyles'
 import { StylingAnyComponent } from './StylingAnyComponent'
 import { AttachingAdditionalProps } from './AttachingAdditionalProps'
+import { Animation } from './Animation'
 
 export default [
   GettingStarted,
@@ -10,4 +11,5 @@ export default [
   ExtendingStyles,
   StylingAnyComponent,
   AttachingAdditionalProps,
+  Animation,
 ]
