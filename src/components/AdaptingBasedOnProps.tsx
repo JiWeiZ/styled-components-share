@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-export interface IToolbarButtonItemProps {
+export interface IToolbarButtonItemProps extends HTMLProps<HTMLElement>{
     fixedWidth: number
     disabled: boolean
     active: boolean
     popLabel: string
 }
 
-const ToolbarButtonItem = styled.div<IToolbarButtonItemProps>`
+export const ToolbarButtonItem = styled.div<IToolbarButtonItemProps>`
     display: flex;
     position: relative;
     justify-content: center;
