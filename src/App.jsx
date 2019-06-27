@@ -8,15 +8,8 @@ function Sidebar(props) {
     <div className="sidebar">
       <ol>
         {props.components.map((component, idx) => {
-          if (component.name === 'Home') {
-            return (
-              <li key={idx}><Link to="/">{component.name}</Link></li>
-            )
-          } else {
-            return (
-              <li key={idx}><Link to={'/' + component.name}>{component.name}</Link></li>
-            )
-          }
+          const showName = component.name.replace(/(?=([A-Z]))/g, " ").trim()
+          return <li key={idx}><Link to={'/' + component.name}>{showName}</Link></li>
         })}
       </ol>
     </div>

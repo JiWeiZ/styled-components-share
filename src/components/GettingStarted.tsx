@@ -8,10 +8,11 @@ const Title = styled('h1')`
   color: palevioletred;
 `;
 // Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled('div')`
+const Wrapper = styled.div`
   padding: 4em;
   background: papayawhip;
 `;
+
 // Use Title and Wrapper like any other React component – except they're styled!
 export const GettingStarted = () =>
   <Wrapper>

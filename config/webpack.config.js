@@ -23,7 +23,8 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -354,6 +355,13 @@ module.exports = function(webpackEnv) {
                 cacheCompression: isEnvProduction,
                 compact: isEnvProduction,
               },
+            },
+            {
+              test: /\.tsx?$/,
+              loader: 'ts-loader',
+              options: {
+                  getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+              }
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
