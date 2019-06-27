@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.sidebar{
+  font-size: 15px;
+  background-color: #fff;
+  width: 20rem;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  padding-left: 3rem; 
+  top: 1.6rem;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-right: 1px solid #eaecef;
+  overflow-y: auto;
+}
+.main {
+  padding-left: 20rem;
+}
+.content {
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+}
