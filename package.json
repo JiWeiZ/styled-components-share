@@ -127,6 +127,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.4",
     "typescript-plugin-styled-components": "^1.4.3"
   }
 }

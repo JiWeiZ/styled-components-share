@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css'
-import components from './components/index'
+import components from './components'
 
 function Sidebar(props) {
   return (

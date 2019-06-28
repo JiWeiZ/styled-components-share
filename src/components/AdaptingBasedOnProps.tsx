@@ -1,7 +1,6 @@
-import styled from 'styled-components'
-import React, { HTMLProps } from 'react';
-
-export interface IToolbarButtonItemProps extends HTMLProps<HTMLElement>{
+import React from 'react';
+import styled, { IStyledComponentsProps } from 'styled-components'
+export interface IToolbarButtonItemProps extends IStyledComponentsProps{
     fixedWidth: number
     disabled: boolean
     active: boolean

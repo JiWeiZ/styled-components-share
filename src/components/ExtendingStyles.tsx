@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import React from 'react';
-import { ToolbarButtonItem, IToolbarButtonItemProps } from './AdaptingBasedOnProps'
+import { ToolbarButtonItem } from './AdaptingBasedOnProps'
 import { Line } from './Line';
 
 const ToolbarButtonItemWithBorder = styled(ToolbarButtonItem)`
@@ -20,6 +20,21 @@ export const ExtendingStyles = () => (
       >
         微软雅黑
       </ToolbarButtonItemWithBorder>
+    </div>
+    <Line />
+    <div>
+      <ToolbarButtonItem
+        css={`
+          border: 1px solid red;
+          background: pink;
+        `}
+        disabled={false}
+        active={false}
+        popLabel='字体'
+        fixedWidth={70}
+      >
+        微软雅黑
+      </ToolbarButtonItem>
     </div>
     <Line />
     <div>
