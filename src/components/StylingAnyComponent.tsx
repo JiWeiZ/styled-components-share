@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import React from 'react';
-import './index.css'
 
 const StyledLink = styled(Link)`
   color: palevioletred;

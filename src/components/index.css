@@ -1,3 +1,7 @@
 .big {
   font-size: 32px;
 }
+
+.red-bg {
+  background-color: red;
+}
