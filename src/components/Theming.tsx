@@ -1,5 +1,5 @@
-import styled, { ThemeProvider } from 'styled-components'
-import React from 'react';
+import styled, { ThemeProvider, withTheme, ThemeContext } from 'styled-components'
+import React, { useContext } from 'react';
 
 // Define our button, but with the use of props.theme this time
 const Button = styled.button`
@@ -26,6 +26,7 @@ const theme = {
   main: "mediumseagreen"
 };
 
+// ============================================================================
 
 const Button2 = styled.button`
   color: ${props => props.theme.fg};
@@ -41,13 +42,51 @@ const Button2 = styled.button`
 // Define our `fg` and `bg` on the theme
 const theme2 = {
   fg: "palevioletred",
-  bg: "white"
+  bg: "#F3ED7B"
 };
 // This theme swaps `fg` and `bg`
 const invertTheme = ({ fg, bg }) => ({
   fg: bg,
   bg: fg
 });
+
+// ============================================================================
+class MyComponent extends React.Component<any, any> {
+  render() {
+    console.log('Current theme: ', this.props.theme);
+    const { theme } = this.props
+    return (
+      <div style={{
+        height: '50px',
+        width: '200px',
+        color: theme.fg,
+        backgroundColor: theme.bg
+      }}>
+        React.Component
+      </div>
+    )
+  }
+}
+
+const ThemedComponent = withTheme(MyComponent)
+
+// ============================================================================
+
+const HookComponent = () => {
+  const theme = useContext(ThemeContext);
+  return (
+    <div style={{
+      height: '50px',
+      width: '200px',
+      color: theme.fg,
+      backgroundColor: theme.bg
+    }}>
+      React.Component
+    </div>
+  )
+}
+
+// ============================================================================
 
 export const Theming = () => (
   <div>
@@ -58,7 +97,9 @@ export const Theming = () => (
         <Button>Themed</Button>
       </ThemeProvider>
     </div>
+
     <br />
+
     <div>
       <ThemeProvider theme={theme2}>
         <div>
@@ -69,9 +110,23 @@ export const Theming = () => (
         </div>
       </ThemeProvider>
     </div>
+
     <br />
+
     <div>
+      <ThemeProvider theme={theme2}>
+        <ThemedComponent />
+      </ThemeProvider>
     </div>
+
+    <br />
+
+    <div>
+      <ThemeProvider theme={theme2}>
+        <HookComponent />
+      </ThemeProvider>
+    </div>
+
   </div>
 )
 

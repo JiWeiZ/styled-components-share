@@ -366,6 +366,7 @@ module.exports = function (webpackEnv) {
                       "displayName": false,
                       "fileName": true,
                       "minify": true,
+                      "pure": true,
                       "transpileTemplateLiterals": true
                     }
                   ]
